@@ -11,7 +11,7 @@ def update_model(model: Pipeline) -> None:
 def save_simple_metrics_report(train_score: float, test_score: float, validation_score: float, model: Pipeline) -> None:
     with open('report.txt', 'w') as report_file:
 
-        report_file.write('# Model Pipeline Description''+'\n')
+        report_file.write('# Model Pipeline Description +'\n')
 
         for key, value in model.named_steps.items():
             report_file.write(f'### {key}:{value.__repr__()}'+'\n')
