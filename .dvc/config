@@ -1,0 +1,4 @@
+['remote "dataset-track"']
+    url = gs://model-datasets-tracker/dataset
+['remote "model-track"']
+    url = gs://model-datasets-tracker/model
