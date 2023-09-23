@@ -22,6 +22,10 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Set up Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
       - name: Train model
         env: 
           SERVICE_ACCOUNT_KEY: ${{ secrets.SERVICE_ACCOUNT_KEY }}
@@ -54,4 +58,4 @@ jobs:
         run: |
           cat report.txt >> report.md 
           echo "![](./prediction_behavior.png)" >> report.md
-          cml-send-comment report.md
+          cml comment create report.md
