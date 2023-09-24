@@ -1,8 +1,10 @@
 name: Continuous Training
 on:
-  push:
-    branches:
-      - workflow_continuos_training # va el nombre de la rama para que se dipare.
+### Sólo se usa para probar que todo funcione haciendo push
+#  push:
+#    branches:
+#      - workflow_continuos_training # va el nombre de la rama para que se dipare.
+###
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
