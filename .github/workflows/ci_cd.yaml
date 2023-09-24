@@ -1,21 +1,19 @@
 name: Continuous Integration/Continuous Deployment
-on: [push]
-#
-#
-#  push:
-#     branches:
-#      - main 
-#  workflow_run:
-#    workflows: ["Continuous Training"]
-#    branches: [main]
-#    types:
-#      - completed
-#  workflow_dispatch:
-#    inputs:
-#      reason:
-#        description: Why to run this?
-#        required: false
-#        default: running CI/CD
+on:
+ push:
+    branches:
+     - main 
+ workflow_run:
+   workflows: ["Continuous Training"]
+   branches: [main]
+   types:
+     - completed
+ workflow_dispatch:
+   inputs:
+     reason:
+       description: Why to run this?
+       required: false
+       default: running CI/CD
 jobs:
   ci_cd:
     runs-on: ubuntu-latest
